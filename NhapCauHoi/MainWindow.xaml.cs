@@ -41,6 +41,12 @@ namespace NhapCauHoi
 
         private void ChangeQuestionButton_Click(object sender, RoutedEventArgs e)
         {
+            if (Directory.Exists(QuestionSavePath) == false)
+            {
+                MessageBox.Show("Không tìm thấy CÂU HỎI", "Lỗi !", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             var imageLinks = Directory.GetFiles(QuestionSavePath);
             var questionCount = imageLinks.Count();
             var random = new Random();
@@ -54,6 +60,12 @@ namespace NhapCauHoi
 
         private void ShowAnswerButton_Click(object sender, RoutedEventArgs e)
         {
+            if (Directory.Exists(AnswerSavePath) == false)
+            {
+                MessageBox.Show("Không tìm thấy CÂU TRẢ LỜI", "Lỗi !", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             var imageLinks = Directory.GetFiles(AnswerSavePath);
             var imagePath = AppDomain.CurrentDomain.BaseDirectory + imageLinks[CurrentQuestion];
             answerImage.Source = new BitmapImage(new Uri(imagePath));
