@@ -1,0 +1,25 @@
+﻿<Window x:Class="NhapCauHoi.EnterQuestionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NhapCauHoi"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="EnterQuestionWindow" Height="450" Width="800">
+    <StackPanel Margin="5">
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Nhập ảnh câu hỏi" Click="Button_Click"/>
+            <Button Content="Nhập ảnh đáp án" Name="enterAnswerButton" Click="EnterAnswerButton_Click" Margin="5,0,0,0"/>
+            <Button Content="Lưu câu hỏi" Name="saveQuestionButton" Click="SaveQuestionButton_Click" Margin="5,0,0,0"/>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="questionImage" Grid.Column="0"/>
+            <Image x:Name="answerImage" Grid.Column="1"/>
+        </Grid>
+    </StackPanel>
+</Window>
