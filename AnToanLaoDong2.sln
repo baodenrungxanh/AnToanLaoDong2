@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhapCauHoi", "NhapCauHoi\NhapCauHoi.csproj", "{EAE2289C-D595-4830-B848-5829F7C6C82C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{81664793-6133-4192-9490-6BC22C098F89}"
+	ProjectSection(SolutionItems) = preProject
+		du_lieu_cau_hoi.zip = du_lieu_cau_hoi.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
